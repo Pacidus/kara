@@ -32,26 +32,26 @@ Issues = "https://github.com/Pacidus/kara/issues"
 Source = "https://github.com/Pacidus/kara"
 
 [tool.hatch.version]
-path = "src/kara/__about__.py"
+path = "src/karasea/__about__.py"
 
 [tool.hatch.envs.types]
 extra-dependencies = [
   "mypy>=1.0.0",
 ]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/kara tests}"
+check = "mypy --install-types --non-interactive {args:src/karasea tests}"
 
 [tool.coverage.run]
-source_pkgs = ["kara", "tests"]
+source_pkgs = ["karasea", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/kara/__about__.py",
+  "src/karasea/__about__.py",
 ]
 
 [tool.coverage.paths]
-karasea = ["src/kara", "*/kara/src/kara"]
-tests = ["tests", "*/kara/tests"]
+karasea = ["src/karasea", "*/karasea/src/karasea"]
+tests = ["tests", "*/karasea/tests"]
 
 [tool.coverage.report]
 exclude_lines = [
